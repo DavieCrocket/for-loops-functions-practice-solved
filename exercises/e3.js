@@ -8,11 +8,21 @@
  * Example: getAverage([22, 45, 4, 65]) => 34
  * */
 
-export function getAverage(array) {
-  // Your code goes here...
-
+// function getAverage(array) {
+  export function getAverage(array) {
+  let x = 0;
+  let num = 0;
+  let sum = 0;
+  let divisor = array.length;
+  for (x of array) {
+    num = x;
+    sum += num;
+  }
+  return sum / divisor; 
 }
 
+let arr = [22, 45, 4, 65];
+console.log(getAverage(arr));
 
 /** 
  * PART 2
@@ -21,10 +31,20 @@ export function getAverage(array) {
  * Example2: getStringSum("GHIUJUHSG") => 0
  * */ 
 
+// function getStringSum(str) {
 export function getStringSum(str) {
-  // Your code goes here...
-
+  let y = 0;
+  let num2 = 0;
+  for (y of str) {
+    if (y >= 0 || y <= 9) {
+      num2 += (y * 1);
+    }
+  }
+  return num2; 
 }
+let string = "GH2U87A";
+console.log(getStringSum(string));
+
 
 
 // === TEST YOURSELF ===
