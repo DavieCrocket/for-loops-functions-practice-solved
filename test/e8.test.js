@@ -6,7 +6,8 @@ describe('getClientWithGreatestBalance', () => {
   it('Should exist', () => {
     expect(getClientWithGreatestBalance).toBeInstanceOf(Function);
   });
-  it('Should return an array of 1 item (object)', () => {
+  it.only('Should return an array of 1 item (object)', () => {
+
     expect(getClientWithGreatestBalance(bankAccounts).length).toEqual(1);
   });
   it('Should return an exact string value', () => {

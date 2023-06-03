@@ -25,12 +25,10 @@ export function findMaxValueInArray(array) {
   return maxVal;
 }
 let arr = [2, 45, 32, 3, 0, 46, 12];
-console.log(findMinValueInArray(arr));
-console.log(findMaxValueInArray(arr));
+
 
 let arr2 = [20, 24, 19, 26];
-console.log(findMinValueInArray(arr2));
-console.log(findMaxValueInArray(arr2));
+
 
 
 // === TEST YOURSELF ===

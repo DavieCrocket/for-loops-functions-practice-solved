@@ -30,13 +30,13 @@ export function getClientWithNoMoney(array) {
   for (let i = 0; i < 5; i++) {
     if (array[i].balance === 0) {
       youreBroke = array[i].name;
-      brokeList.push(youreBroke);
+      brokeList.push(array[i].name);
       console.log(brokeList);
 
       return brokeList;
     }
   }
-  return console.log(bankAccounts[i].name);
+  return bankAccounts[i].name
 }
 
 getClientWithNoMoney(bankAccounts);

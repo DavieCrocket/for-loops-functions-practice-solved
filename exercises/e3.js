@@ -22,7 +22,7 @@
 }
 
 let arr = [22, 45, 4, 65];
-console.log(getAverage(arr));
+
 
 /** 
  * PART 2
@@ -43,7 +43,7 @@ export function getStringSum(str) {
   return num2; 
 }
 let string = "GH2U87A";
-console.log(getStringSum(string));
+
 
 
 

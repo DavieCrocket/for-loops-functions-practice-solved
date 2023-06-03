@@ -14,10 +14,8 @@ export function getNumbersWithSquareRoots(max) {
   return perfSquares;
 }
 
-let numArry = null;
-let max = 1000;
-numArry = getNumbersWithSquareRoots(max);
-console.log(numArry);
+
+
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-2"

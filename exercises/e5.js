@@ -23,7 +23,7 @@ export const accountHolders = [
 ];
 
 let array = accountHolders;
-console.log(getAllClientNames(array));
+
 
 
 
