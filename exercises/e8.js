@@ -30,10 +30,8 @@ export function getClientWithGreatestBalance(array) {
 
   for (let account of array) {
     let currBalance = account.balance;
-    console.log({maxBalance})
     if (currBalance > 0 && currBalance > maxBalance || maxBalance == 0) {
-      output 
-      = [];
+      output = [];
       output.push(account); 
       maxBalance = currBalance;
     }
@@ -43,7 +41,6 @@ export function getClientWithGreatestBalance(array) {
   }
 
   if (output[1] === 0) {
-    console.log("hit")
     output = []
   }
   console.log(output)
@@ -51,7 +48,6 @@ export function getClientWithGreatestBalance(array) {
 }
 
 
-;
 // document.getElementById("demo").innerHTML = result;
 
 // === TEST YOURSELF ===
