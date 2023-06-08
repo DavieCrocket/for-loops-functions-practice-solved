@@ -6,7 +6,7 @@ describe('getClientWithLeastBalance', () => {
   it('Should exist', () => {
     expect(getClientWithLeastPositiveBalance).toBeInstanceOf(Function);
   });
-  it.only('Should return an array of 1 item (object)', () => {
+  it('Should return an array of 1 item (object)', () => {
     expect(getClientWithLeastPositiveBalance(bankAccounts).length).toEqual(1);
   });
   it('Should return an array with an object if there is an account with least balance, but greater than > 0', () => {
