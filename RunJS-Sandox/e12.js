@@ -1,9 +1,3 @@
-// EXERCISE 11
-// Return an array of withdrawal sums of each bank account.
-// If the account doesn't have withdrawals, it's sum is 0.
-// Array example: bankAccounts in /data/data.js
-// getAllWithdrawals(bankAccounts) => [3432, 0, 43242.34, 0, 23432]
-
 const bankAccounts = [
   {
     id: 1,
@@ -24,7 +18,9 @@ const bankAccounts = [
   { id: 5, name: "Phil", balance: 18, deposits: [100, 18], withdrawals: [100] },
 ];
 
-export function getAllWithdrawals( array ) {
+// export function getAllWithdrawals( array ) {
+function getAllWithdrawals( array ) {
+  let sum = 0;
   let accWithdrawals = [];
   let account = 0;
   let withdrawalSums = [];
@@ -40,27 +36,25 @@ export function getAllWithdrawals( array ) {
   }
   
   // sum the widthdrawal amounts for each account and put into new array.
-  for ( let i = 0; i < accWithdrawals.length; i++ ) {
+  let i = 0;
+  let j = 0;
+  for ( i; i < accWithdrawals.length; i++ ) {
     withdrawalSums = accWithdrawals[i];
     // console.log('withdrawalSums: ' + withdrawalSums);
-    for ( let j = 0; j < withdrawalSums.length; j++ ) {
+    j = 0;
+    for ( j; j < withdrawalSums.length; j++ ) {
+      // console.log('i is: ' + i + ' and j is: ' + j);
       account += accWithdrawals[i][j];
     }
     acctSum.push(account);
+    // console.log('j loop: ' + acctSum);
     account = 0;
   }
     
+    // for ( j of accWithdrawals[i] )
+  // console.log( accWithdrawals[j] )
   return acctSum;
 }
   
 // getAllWithdrawals( bankAccounts );
 console.log(getAllWithdrawals( bankAccounts ));
-// getAllWithdrawals( bankAccounts );
-
-
-
-
-// === TEST YOURSELF ===
-// Once you're finished run the test with "npm run test-11"
-// If the test has all tests passed, switch to the next exercise file
-// If any of the tests fails, refactor the code and run the test command after you've fixed the function
