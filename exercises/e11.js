@@ -41,24 +41,22 @@ export function getAllWithdrawals( array ) {
   }
   
   // sum the widthdrawal amounts for each account and put into new array.
-  let i = 0;
-  let j = 0;
-  for ( i; i < accWithdrawals.length; i++ ) {
+  for ( let i = 0; i < accWithdrawals.length; i++ ) {
     withdrawalSums = accWithdrawals[i];
-    console.log('withdrawalSums: ' + withdrawalSums);
-    j = 0;
-    for ( j; j < withdrawalSums.length; j++ ) {
-      console.log('i is: ' + i + ' and j is: ' + j);
+    // console.log('withdrawalSums: ' + withdrawalSums);
+    for ( let j = 0; j < withdrawalSums.length; j++ ) {
       account += accWithdrawals[i][j];
     }
     acctSum.push(account);
-    console.log('j loop: ' + acctSum);
     account = 0;
   }
+    
   return acctSum;
 }
   
+// getAllWithdrawals( bankAccounts );
 getAllWithdrawals( bankAccounts );
+// getAllWithdrawals( bankAccounts );
 
 
 
