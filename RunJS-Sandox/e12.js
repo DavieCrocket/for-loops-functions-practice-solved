@@ -1,4 +1,4 @@
-const bankAccounts = [
+export const bankAccounts = [
   {
     id: 1,
     name: "Susan",
@@ -18,43 +18,34 @@ const bankAccounts = [
   { id: 5, name: "Phil", balance: 18, deposits: [100, 18], withdrawals: [100] },
 ];
 
-// export function getAllWithdrawals( array ) {
-function getAllWithdrawals( array ) {
-  let sum = 0;
-  let accWithdrawals = [];
-  let account = 0;
-  let withdrawalSums = [];
-  let acctSum = [];
-  
-  // get widthdrawals from accounts and put into a new array.
-  for (let account of array) {
-    if (account['withdrawals']) {
-      accWithdrawals.push(account['withdrawals']);
+export function getAllDepositsGreaterThanOneHundred(array) {
+  // create list of account deposits
+  let accDeposits = [];
+  let depositList = [];
+  let depositsOver100 = [];
+  for ( let account of array ) {
+    if ( account[ 'deposits' ] ) {
+      accDeposits.push( account[ 'deposits' ]);
     } else {
-      accWithdrawals.push([0]);
+      accDeposits.push( [0] );
     }
   }
-  
-  // sum the widthdrawal amounts for each account and put into new array.
-  let i = 0;
-  let j = 0;
-  for ( i; i < accWithdrawals.length; i++ ) {
-    withdrawalSums = accWithdrawals[i];
-    // console.log('withdrawalSums: ' + withdrawalSums);
-    j = 0;
-    for ( j; j < withdrawalSums.length; j++ ) {
-      // console.log('i is: ' + i + ' and j is: ' + j);
-      account += accWithdrawals[i][j];
+  for ( let i = 0; i < accDeposits.length; i++ ) {
+    depositList = accDeposits[i];
+    // console.log(depositList)
+    // console.log('i is: ' + i);
+    for ( let j = 0; j < depositList.length; j++) {
+      if (depositList[j] > 100) {
+        depositsOver100.push( depositList[j] )
+        // console.log('j is: ' + j);
+        // console.log('depositsOver100: ' + depositsOver100 )
+      }
     }
-    acctSum.push(account);
-    // console.log('j loop: ' + acctSum);
-    account = 0;
-  }
     
-    // for ( j of accWithdrawals[i] )
-  // console.log( accWithdrawals[j] )
-  return acctSum;
+  }
+  return depositsOver100;
 }
-  
-// getAllWithdrawals( bankAccounts );
-console.log(getAllWithdrawals( bankAccounts ));
+  // sum the widthdrawal amounts for each account and put into new array.
+  // for ( let i = 0; i < accDeposits.length; i++ ) {
+ 
+console.log(getAllDepositsGreaterThanOneHundred(bankAccounts));

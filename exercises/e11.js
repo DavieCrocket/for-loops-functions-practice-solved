@@ -53,7 +53,6 @@ export function getAllWithdrawals( array ) {
   return acctSum;
 }
   
-// getAllWithdrawals( bankAccounts );
 console.log(getAllWithdrawals( bankAccounts ));
 // getAllWithdrawals( bankAccounts );
 
