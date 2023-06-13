@@ -20,7 +20,7 @@ const bankAccounts = [
 
   { id: 4,
     name: "Candy",
-    balance: 0.0 },
+    balance: 0.0 }, // 18
 
   { id: 5,
     name: "Phil",
@@ -39,45 +39,16 @@ const bankAccounts = [
 
 export function getClientsWithWrongBalance(array) {
   let depositSum = 0;
-  let acctDepositSum = [];
-  
-  let withdrawalSum = 0;
-  let acctWithdrawalSum = [];
-  
-  let balance = 0;
-  let balanceDoesntMatch = [];
-  
   for (let acct = 0; acct < array.length; acct++) {
     if (array[acct]['deposits']) {
-      for (let index = 0; index < array[acct]['deposits'].length; index++) {
+      console.log(array[acct]['deposits']);
+      for (let index = 0; index < array['deposits'].length; index++) {
         depositSum += array[acct]['deposits'][index];
       }
-      acctDepositSum.push(depositSum);
-      depositSum = 0;
-    } else {
-      acctDepositSum.push(0);
     }
   }
   
-  for (let acct = 0; acct < array.length; acct++) {
-    if (array[acct]['withdrawals']) {
-      for (let index = 0; index < array[acct]['withdrawals'].length; index++) {
-        withdrawalSum += array[acct]['withdrawals'][index];
-      }
-      acctWithdrawalSum.push(withdrawalSum);
-      withdrawalSum = 0;
-    } else {
-      acctWithdrawalSum.push(0);
-    }
-  }
-  
-  for (let index = 0; index < acctDepositSum.length; index++) {
-    if (array[index]['balance'] !== acctDepositSum[index] - acctWithdrawalSum[index]) {
-      balanceDoesntMatch.push(array[index]);
-    }
-  }
-  console.log(balanceDoesntMatch);
-  return balanceDoesntMatch;
+
 }
 
 getClientsWithWrongBalance(bankAccounts);
