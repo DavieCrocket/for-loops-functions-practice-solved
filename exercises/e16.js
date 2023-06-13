@@ -6,11 +6,27 @@
 // NOTE: You can NOT use the array.flat() method in your code
 
 export function flatArrays(array) {
-  // Your code goes here...
-
+  let newArray = [];
+  for (let x = 0; x < arr1.length; x++)
+    if (typeof(array[x]) == 'string') {
+      newArray.push(array[x])
+    } else if (typeof(array[x]) == 'object') {
+      for (let y = 0; y < array[x].length; y++) {
+        newArray.push(array[x][y]);
+      }
+    }
+  return newArray;
 }
 
+const arr1 = [['d', 'r'], 'z', 'b', ['f', 'y']];
 
+const flatArraysData = [
+  ["Yay", "!", "this"],
+  ["works", "as", "expected", "!"]
+];
+
+flatArrays(arr1);
+flatArrays(flatArraysData);
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-16"
