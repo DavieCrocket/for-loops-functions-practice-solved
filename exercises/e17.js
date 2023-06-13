@@ -6,11 +6,20 @@
 // NOTE: You can NOT use the array.includes() method in your code
 
 export function doesArrayInclude(array, value) {
-  // Your code goes here...
-
+  for (let val of array) {
+    if (val == value) {
+      return true;
+    }
+  }
+  return false;
 }
 
+const array = ['c', 'd', 'f', 'h', 'i', 'z', 'v'];
+const value = 'v';
+const value2 = 't';
 
+doesArrayInclude(array, value);
+doesArrayInclude(array, value2);
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-17"
