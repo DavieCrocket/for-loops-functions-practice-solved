@@ -5,11 +5,16 @@
 // NOTE: You can NOT use the array.reverse() method in your code
 
 export function reverseArray(array) {
-  // Your code goes here...
-
+  let revArray = [];
+  for (let x = array.length - 1; x > -1; x--) {
+    revArray.push(array[x])
+  }
+  return revArray;
 }
 
+let array = [1, 2, 3, 4];
 
+reverseArray(array);
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-19"

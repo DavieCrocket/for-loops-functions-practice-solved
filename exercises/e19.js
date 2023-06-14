@@ -14,7 +14,7 @@ export function reverseArray(array) {
 
 let array = [1, 2, 3, 4];
 
-console.log(reverseArray(array));
+reverseArray(array);
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-19"

@@ -6,10 +6,44 @@
 // NOTE: You MUST use double/nested FOR loop to solve this exercise. The array.includes() method is NOT allowed.
 
 export function separateNamesWithAFromRest(array) {
-  // Your code goes here...
-
+  let namesWithA = [];
+  let namesWithoutA = [];
+  let sortedNames = [];
+  for (let x = 0; x < array.length; x++) {
+    for (let y = 0; y < array[x].length; y++) {
+      if (array[x][y] == 'a' || array[x][y] == 'A') {
+        namesWithA.push(array[x]);
+        break
+      }
+      if (y == array[x].length - 1) {
+        namesWithoutA.push(array[x]);
+      }
+    }
+  }
+  sortedNames.push(namesWithA);
+  sortedNames.push(namesWithoutA);
+  return sortedNames;
 }
 
+const classSeatsFlattened = [
+  "Ben",
+  "Emma",
+  "Sophia",
+  "William",
+  "Elijah",
+  "James",
+  "Lucas",
+  "Mason",
+  "Mia",
+  "Liam",
+  "Noah",
+  "Oliver",
+  "Ethan",
+  "Harper",
+  "Evelyn",
+];
+
+separateNamesWithAFromRest(classSeatsFlattened);
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-20"
