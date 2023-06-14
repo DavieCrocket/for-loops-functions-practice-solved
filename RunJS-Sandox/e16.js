@@ -1,6 +1,11 @@
 
+// EXERCISE 16
+// Please, read the exercise-info/flat.md to get the initial data of what is the expected result of this exercise.
+// Array example: flatArraysData in /data/data.js
+// flatArrays([['d', 'r'], 'z', 'b', ['f', 'y']]) => ['d', 'r', 'z', 'b', 'f', 'y']
+// NOTE: You can NOT use the array.flat() method in your code
+
 export function flatArrays(array) {
-// function flatArrays(array) {
   let newArray = [];
   for (let x = 0; x < arr1.length; x++)
     if (typeof(array[x]) == 'string') {
@@ -13,12 +18,17 @@ export function flatArrays(array) {
   return newArray;
 }
 
-export const arr1 = [['d', 'r'], 'z', 'b', ['f', 'y']];
+const arr1 = [['d', 'r'], 'z', 'b', ['f', 'y']];
 
-export const flatArraysData = [
+const flatArraysData = [
   ["Yay", "!", "this"],
-  ["works", "as", "expected", "!"],
+  ["works", "as", "expected", "!"]
 ];
 
-console.log(flatArrays(arr1));
-console.log(flatArrays(flatArraysData));
+flatArrays(arr1);
+flatArrays(flatArraysData);
+
+// === TEST YOURSELF ===
+// Once you're finished run the test with "npm run test-16"
+// If the test has all tests passed, switch to the next exercise file
+// If any of the tests fails, refactor the code and run the test command after you've fixed the function
