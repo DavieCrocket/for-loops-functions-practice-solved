@@ -9,20 +9,13 @@
  * */
 
 // function getAverage(array) {
-  export function getAverage(array) {
-  let x = 0;
-  let num = 0;
+export function getAverage(array) {
   let sum = 0;
-  let divisor = array.length;
-  for (x of array) {
-    num = x;
-    sum += num;
+  for (let i = 0; i < array.length; i++) {
+    sum += array[i];
+    }
+  return sum / array.length; 
   }
-  return sum / divisor; 
-}
-
-let arr = [22, 45, 4, 65];
-
 
 /** 
  * PART 2
@@ -42,7 +35,6 @@ export function getStringSum(str) {
   }
   return num2; 
 }
-let string = "GH2U87A";
 
 
 

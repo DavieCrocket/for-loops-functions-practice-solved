@@ -24,11 +24,6 @@ export function findMaxValueInArray(array) {
   }
   return maxVal;
 }
-let arr = [2, 45, 32, 3, 0, 46, 12];
-
-
-let arr2 = [20, 24, 19, 26];
-
 
 
 // === TEST YOURSELF ===

@@ -14,10 +14,6 @@ export function concatArrays(arr1, arr2) {
   }
   return concArr;
 }
-const array1 = ['a', 'b', 'c'];
-const array2 = ['d', 'e', 'f'];
-
-console.log(concatArrays(array1, array2));
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-15"

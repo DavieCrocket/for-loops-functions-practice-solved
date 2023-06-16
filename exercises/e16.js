@@ -7,7 +7,7 @@
 
 export function flatArrays(array) {
   let newArray = [];
-  for (let x = 0; x < arr1.length; x++)
+  for (let x = 0; x < array.length; x++)
     if (typeof(array[x]) == 'string') {
       newArray.push(array[x])
     } else if (typeof(array[x]) == 'object') {
@@ -18,15 +18,6 @@ export function flatArrays(array) {
   return newArray;
 }
 
-const arr1 = [['d', 'r'], 'z', 'b', ['f', 'y']];
-
-const flatArraysData = [
-  ["Yay", "!", "this"],
-  ["works", "as", "expected", "!"]
-];
-
-flatArrays(arr1);
-flatArrays(flatArraysData);
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-16"

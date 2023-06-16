@@ -25,25 +25,6 @@ export function separateNamesWithAFromRest(array) {
   return sortedNames;
 }
 
-const classSeatsFlattened = [
-  "Ben",
-  "Emma",
-  "Sophia",
-  "William",
-  "Elijah",
-  "James",
-  "Lucas",
-  "Mason",
-  "Mia",
-  "Liam",
-  "Noah",
-  "Oliver",
-  "Ethan",
-  "Harper",
-  "Evelyn",
-];
-
-separateNamesWithAFromRest(classSeatsFlattened);
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-20"

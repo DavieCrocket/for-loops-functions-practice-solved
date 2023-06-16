@@ -14,12 +14,6 @@ export function doesArrayInclude(array, value) {
   return false;
 }
 
-const array = ['c', 'd', 'f', 'h', 'i', 'z', 'v'];
-const value = 'v';
-const value2 = 't';
-
-doesArrayInclude(array, value);
-doesArrayInclude(array, value2);
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-17"
