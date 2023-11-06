@@ -8,8 +8,6 @@
 // import { bankAccounts } from '../data/data.js';
 
 export function getClientWithLeastPositiveBalance( array ) {
-  let i = 0;
-  let acc = 0;
   let minBalance = 0;
   let output = [];
   
@@ -21,13 +19,10 @@ export function getClientWithLeastPositiveBalance( array ) {
       output = [];
       output.push(account); 
       minBalance = currBalance;
-      console.log(output);
 
     } else if ( currBalance <= 0 && currBalance < minBalance ) { 
       minBalance = currBalance;
       output = [];
-      console.log( 'minBalance2 = ' + minBalance );
-      console.log(output);
     }
 
     if (array.length == 0) {
@@ -49,7 +44,6 @@ export function getClientWithLeastBalance( array ) {
       output2 = [];
       output2.push(array[account]); 
       minBalance = currBalance;
-      console.log( 'minBalance1 = ' + minBalance );
     }
     
     if ( array.length == 0 ) {
