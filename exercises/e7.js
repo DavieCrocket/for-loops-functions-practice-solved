@@ -32,27 +32,7 @@ export function getClientWithLeastPositiveBalance( array ) {
   return output;
 }
 
-export function getClientWithLeastBalance( array ) {
 
-  let minBalance = 0;
-  let output2 = [];
-
-  for ( let account of array ) {
-    let currBalance = account.balance;
-  
-    if ( currBalance > 0 && currBalance < minBalance || minBalance === 0 ) {
-      output2 = [];
-      output2.push(array[account]); 
-      minBalance = currBalance;
-    }
-    
-    if ( array.length == 0 ) {
-    output2 = [];
-    return output2
-    }
-  }
-  return output2;
-}
 
 
 // === TEST YOURSELF ===

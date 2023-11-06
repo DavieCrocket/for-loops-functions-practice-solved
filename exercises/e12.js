@@ -3,8 +3,7 @@
 // Array example: bankAccounts in /data/data.js
 // getAllDepositsGreaterThanOneHundred(bankAccounts) => [3432, 43242.34, 23432]
 
-// function getAllDepositsGreaterThanOneHundred(array) {
-export function getAllDepositsGreaterThanOneHundred(array) {
+/* export function getAllDepositsGreaterThanOneHundred(array) {
   // create array of account deposits
   let accDeposits = [];
   let depositList = [];
@@ -28,7 +27,25 @@ export function getAllDepositsGreaterThanOneHundred(array) {
     
   }
   return depositsOver100;
+} */
+
+//* Nicolas Feedback */
+//********************************************************************************** */
+export function getAllDepositsGreaterThanOneHundred(array) {
+  let depositsOver100 = [];
+  for (let user of array) {
+    if (user.deposits) {
+      for (let amount of user.deposits) {
+        if (amount > 100) {
+          depositsOver100.push( amount );
+        }
+      }
+    }
+  }
+  return depositsOver100;
 }
+
+//********************************************************************************** */
 
 
 // === TEST YOURSELF ===
